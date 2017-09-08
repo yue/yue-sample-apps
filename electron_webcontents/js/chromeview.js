@@ -9,7 +9,7 @@ if (process.platform != 'darwin') {
 }
 
 const electron = require('electron')
-const gui = require('./out/Component/gui.node')
+const gui = require('gui')
 
 const menu = gui.MenuBar.create([
   {
