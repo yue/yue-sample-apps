@@ -31,3 +31,8 @@ contentview.onDraw = (self, painter) => {
 
 win.center()
 win.activate()
+
+if (!process.versions.yode) {
+  gui.lifetime.run()
+  process.exit(0)
+}
