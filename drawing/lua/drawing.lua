@@ -125,21 +125,16 @@ end
 
 function rounded_rect(painter, r, radius)
   painter:beginpath()
-  painter:moveto(r.x, r.y + radius)
-  painter:lineto(r.x, r.y + r.height - radius)
-  painter:arcto({x=r.x, y=r.y + r.height},
-                {x=r.x + radius, y=r.y + r.height},
-                radius)
-  painter:lineto(r.x + r.width - radius, r.y + r.height)
-  painter:arcto({x=r.x + r.width, y=r.y + r.height},
-                {x=r.x + r.width, y=r.y + r.height - radius},
-                radius)
-  painter:lineto(r.x + r.width, r.y + radius)
-  painter:arcto({x=r.x + r.width, y=r.y},
-                {x=r.x + r.width - radius, y=r.y},
-                radius)
-  painter:lineto(r.x + radius, r.y)
-  painter:arcto({x=r.x, y=r.y}, {x=r.x, y=r.y + radius}, radius)
+  local degrees = math.pi / 180
+  painter:arc({x=r.x + r.width - radius, y=r.y + radius},
+              radius, -90 * degrees, 0)
+  painter:arc({x=r.x + r.width - radius, y=r.y + r.height - radius},
+              radius, 0, 90 * degrees)
+  painter:arc({x=r.x + radius, y=r.y + r.height - radius},
+              radius, 90 * degrees, 180 * degrees)
+  painter:arc({x=r.x + radius, y=r.y + radius},
+              radius, 180 * degrees, 270 * degrees)
+  painter:closepath()
   painter:stroke()
 end
 
