@@ -9,6 +9,7 @@ win:setcontentsize{width=500, height=500}
 local contentview = gui.Container.create()
 win:setcontentview(contentview)
 local toolbar = gui.Container.create()
+toolbar:setstyle{flexdirection='row', padding=5}
 contentview:addchildview(toolbar)
 local back = gui.Button.create('<')
 toolbar:addchildview(back)
@@ -18,9 +19,6 @@ toolbar:addchildview(forward)
 local addressbar = gui.Entry.create()
 addressbar:setstyle{flex=1}
 toolbar:addchildview(addressbar)
-toolbar:setstyle{flexdirection='row',
-                 height=addressbar:getbounds().height + 10,
-                 padding=5}
 local go = gui.Button.create('GO')
 go:setstyle{marginleft=5}
 toolbar:addchildview(go)
