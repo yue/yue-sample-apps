@@ -3,7 +3,7 @@ const gui = require('gui')
 const win = gui.Window.create({frame: false, transparent: true})
 win.setAlwaysOnTop(true)
 win.setContentSize({width: 150, height: 130})
-win.onClose = () => gui.lifetime.quit()
+win.onClose = () => gui.MessageLoop.quit()
 
 const contentview = gui.Container.create()
 contentview.setMouseDownCanMoveWindow(true)
@@ -33,6 +33,6 @@ win.center()
 win.activate()
 
 if (!process.versions.yode) {
-  gui.lifetime.run()
+  gui.MessageLoop.run()
   process.exit(0)
 }

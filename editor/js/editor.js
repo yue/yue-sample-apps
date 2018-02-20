@@ -9,7 +9,7 @@ const menu = gui.MenuBar.create([
       {
         label: 'Quit',
         accelerator: 'CmdOrCtrl+Q',
-        onClick: () => gui.lifetime.quit()
+        onClick: () => gui.MessageLoop.quit()
       },
     ],
   },
@@ -29,7 +29,7 @@ const menu = gui.MenuBar.create([
 
 const win = gui.Window.create({})
 win.setContentSize({width: 400, height: 400})
-win.onClose = () => gui.lifetime.quit()
+win.onClose = () => gui.MessageLoop.quit()
 
 const contentView = gui.Container.create()
 contentView.setStyle({flexDirection: 'row'})
@@ -99,6 +99,6 @@ win.center()
 win.activate()
 
 if (!process.versions.yode) {
-  gui.lifetime.run()
+  gui.MessageLoop.run()
   process.exit(0)
 }

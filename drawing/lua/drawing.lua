@@ -212,7 +212,7 @@ draw_all(canvas:getpainter())
 
 -- Create window.
 win = gui.Window.create{}
-win.onclose = function() gui.lifetime:quit() end
+win.onclose = function() gui.MessageLoop.quit() end
 win:setcontentsize{width=500, height=500}
 
 local content = gui.Container.create()
@@ -230,4 +230,4 @@ end
 win:center()
 win:activate()
 
-gui.lifetime:run()
+gui.MessageLoop.run()
