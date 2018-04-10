@@ -1,5 +1,4 @@
 local gui = require('yue.gui')
-local util = require('yue.util')
 
 function draw_example1(painter)
   for i=0, 5, 1 do
