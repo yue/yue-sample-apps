@@ -7,6 +7,6 @@ their layout.
 | ----------------- | ----------------- | ----------------- |
 | ![][mac-editor]   | ![][linux-editor] | ![][win-editor]   |
 
-[mac-editor]: https://cdn.rawgit.com/yue/yue-app-samples/10cc39d9/editor/screenshots/mac_editor.png
-[linux-editor]: https://cdn.rawgit.com/yue/yue-app-samples/10cc39d9/editor/screenshots/linux_editor.png
-[win-editor]: https://cdn.rawgit.com/yue/yue-app-samples/10cc39d9/editor/screenshots/win_editor.png
+[mac-editor]: https://cdn.jsdelivr.net/gh/yue/yue-app-samples@10cc39d9/editor/screenshots/mac_editor.png
+[linux-editor]: https://cdn.jsdelivr.net/gh/yue/yue-app-samples@10cc39d9/editor/screenshots/linux_editor.png
+[win-editor]: https://cdn.jsdelivr.net/gh/yue/yue-app-samples@10cc39d9/editor/screenshots/win_editor.png
