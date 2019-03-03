@@ -140,26 +140,27 @@ end
 function draw_example6(painter)
   painter:save()
   painter:rotate(math.pi / 4)
-  local text = "draw example 6"
-  local bounds = painter:measuretext(text, -1, {}).size
+  local text = gui.AttributedText.create("draw example 6", {align='center'})
+  local bounds = text:getboundsfor{width=150, height=150}
   bounds.x = 75
   bounds.y = 0
   painter:strokerect(bounds)
-  painter:drawtext(text, bounds, {align='center'})
+  painter:drawattributedtext(text, bounds)
   painter:restore()
 end
 
 function draw_example7(painter)
-  local text = "draw example 7"
-  local font = gui.Font.create('Arial', 18, 'normal', 'normal')
-  local bounds = painter:measuretext(text, -1, {font=font}).size
+  local text = gui.AttributedText.create("draw example 7", {align='center'})
+  text:setfont(gui.Font.create('Arial', 18, 'normal', 'normal'))
+  local bounds = text:getboundsfor{width=150, height=150}
   bounds.x = (150 - bounds.width) / 2
   bounds.y = 75 - bounds.height
-  painter:drawtext(text, bounds, {font=font, align='center'})
+  painter:drawattributedtext(text, bounds)
   painter:save()
   painter:scale(1, -1)
   bounds.y = -150 + bounds.y
-  painter:drawtext(text, bounds, {font=font, color='#888', align='center'})
+  text:setcolor('#888')
+  painter:drawattributedtext(text, bounds)
   painter:restore()
 end
 
