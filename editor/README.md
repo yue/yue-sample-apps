@@ -1,7 +1,6 @@
-# Text Edit
+# Editor
 
-This example shows how to create windows and views in Yue, and how to manage
-their layout.
+A plain text editor with ability to load/save files.
 
 |  macOS            |    Linux          |  Windows          |
 | ----------------- | ----------------- | ----------------- |
