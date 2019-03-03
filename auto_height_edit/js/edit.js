@@ -1,4 +1,4 @@
-const gui = require('./out/Component/gui')
+const gui = require('gui')
 
 const win = gui.Window.create({})
 win.onClose = () => gui.MessageLoop.quit()
