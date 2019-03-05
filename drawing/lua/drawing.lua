@@ -224,7 +224,9 @@ win:setcontentview(content)
 function content.ondraw(self, painter, dirty)
   -- draw_all(painter)
   painter:drawcanvas(canvas, {x=25, y=25, width=450, height=450})
-  -- painter:drawcanvasfromrect(canvas, src, dirty)
+  -- painter:drawcanvasfromrect(canvas,
+  --                            {x=0, y=0, width=450, height=450},
+  --                            self:getlocalbounds())
 end
 
 win:center()
