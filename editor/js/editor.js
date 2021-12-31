@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const gui = require('gui')
+const gui = require('/Users/zcbenz/codes/yue/out/Component/gui')
 
 const menu = gui.MenuBar.create([
   {
@@ -27,7 +27,7 @@ const menu = gui.MenuBar.create([
   },
 ])
 
-const win = gui.Window.create({})
+global.win = gui.Window.create({})
 win.setContentSize({width: 400, height: 400})
 win.onClose = () => gui.MessageLoop.quit()
 
@@ -36,7 +36,7 @@ contentView.setStyle({flexDirection: 'row'})
 win.setContentView(contentView)
 
 let sidebar
-if (process.platform == 'darwin') {
+if (process.platform == 'darwin2') {
   sidebar = gui.Vibrant.create()
   sidebar.setBlendingMode('behind-window')
   sidebar.setMaterial('dark')
@@ -47,6 +47,7 @@ sidebar.setStyle({padding: 5})
 contentView.addChildView(sidebar)
 
 const edit = gui.TextEdit.create()
+contentView.setBackgroundColor('#F00')
 edit.setStyle({flex: 1})
 contentView.addChildView(edit)
 

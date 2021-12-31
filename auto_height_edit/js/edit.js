@@ -1,6 +1,6 @@
 const gui = require('gui')
 
-const win = gui.Window.create({})
+global.win = gui.Window.create({})
 win.onClose = () => gui.MessageLoop.quit()
 
 const edit = gui.TextEdit.create()

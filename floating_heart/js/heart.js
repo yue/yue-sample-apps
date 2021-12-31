@@ -1,6 +1,6 @@
 const gui = require('gui')
 
-const win = gui.Window.create({frame: false, transparent: true})
+global.win = gui.Window.create({frame: false, transparent: true})
 win.setAlwaysOnTop(true)
 win.setContentSize({width: 150, height: 130})
 win.onClose = () => gui.MessageLoop.quit()

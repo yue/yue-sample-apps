@@ -1,7 +1,7 @@
 const gui = require('gui')
 
 // Create window and controls.
-const win = gui.Window.create({})
+global.win = gui.Window.create({})
 win.setContentSize({width: 400, height: 400})
 win.onClose = () => gui.MessageLoop.quit()
 
