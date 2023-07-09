@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const gui = require('/Users/zcbenz/codes/yue/out/Component/gui')
+const gui = require('gui')
 
 const menu = gui.MenuBar.create([
   {
